@@ -1,0 +1,8 @@
+import smtplib
+
+smtpobj = smtplib.SMTP('smtp.gmail.com', 587)
+smtpobj.ehlo()
+smtpobj.starttls()
+smtpobj.login('abc@gmail.com','abcdefg')
+smtpobj.sendmail('abc@gmail.com','xyz@gmail.com','Sunbject - Smtp, \n\n this is the test mail')
+smtpobj.quit()
